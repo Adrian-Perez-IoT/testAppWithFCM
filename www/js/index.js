@@ -1,5 +1,3 @@
-
-
 var app = {
     initialize: function () {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -43,8 +41,8 @@ var app = {
         });
 
         //Accion a realizar cuando recibo una notificacion:
-        window.FirebasePlugin.onNotificationOpen(function (notification) {
-            alert("entre en onNotificatoinopen" + notification);
+        window.FirebasePlugin.onNotificationOpen(function (notification) {            
+            alert("entre en onNotificatoinopen" + Object.keys(notification));
         }, function (error) {
             console.error(error);
         });
@@ -56,7 +54,7 @@ app.initialize();
 
 function sendTokenToServer(token) {
     //guardo el token en una tabla especial en mi base de datos y luego recupero ese registro desde mi servidor backend
-    console.log("estoy en la funcion sendTokenToServer");
+    alert("estoy en la funcion sendTokenToServer");
     writeUserToken("1", "adrian", "Bandy2@gmail.com", token);
 }
 
@@ -72,13 +70,7 @@ function inicializarFirebase() {
         appId: "1:696120565365:web:c63c9e2a24127d2d"
     };
     // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-
-    // Initialize Firebase with a second Firebase project
-    //var otherProject = firebase.initializeApp(firebaseConfig, "other");
-
-    //alert(otherProject.name);
-
+    firebase.initializeApp(firebaseConfig);    
 }
 
 function writeUserToken(userId, name, email, token) {
@@ -89,34 +81,3 @@ function writeUserToken(userId, name, email, token) {
     });
     alert("Ya escribi un nuevo Token");
 }
-
-
-
-/* var app = {
-    // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-    },
-
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
-};
-
-app.initialize(); */
