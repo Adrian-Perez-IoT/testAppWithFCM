@@ -2,25 +2,264 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-tap-highlight" content="no">
-    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <!-- <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <title>Hello World</title>
+    <link rel="stylesheet" type="text/css" href="libs-style/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="libs-style/css/bootstrap-grid.css">
+    <link rel="stylesheet" type="text/css" href="libs-style/css/bootstrap-reboot.css">
+    <title>Home</title>
 </head>
 
-<body>
-    <h1>¡ALARMA ACTIVADA!</h1>
-    <h2>MOTIVO:</h2>
-    <h3>Se detecto movimiento</h3>
-    <h2>LUGAR:</h2>
-    <h3>Dormitorio</h3>
+<body style="background-color:rgb(233, 236, 239)">
+    <div class="container">
+        <header class="jumbotron">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#">Menu</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                            <!-- Esta vista muestra en tiempo real la lectura de datos -->
+                        </li>                        
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Progamar horarios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Generar informes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Notificaciones recibidas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Configuración</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline mt-2 mt-md-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </nav>
+        </header>
+
+
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1>Lectura sensores</h1>            
+            <p>Hogar B° Coronel Arias</p>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped table-xl">
+                <thead>
+                    <tr>
+                        <th>Horario</th>
+                        <th>Movimiento (Patio)</th>
+                        <th>Movimiento (Comedor)</th>
+                        <th>Estado puerta principal</th>
+                        <th>Humo / Gas inflamable (Cocina)</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>23:15:00</td>
+                        <td>No</td>
+                        <td class="table-success">Si</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr>
+                        <td>23:15:00</td>
+                        <td class="table-warning">Si</td>
+                        <td>No</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>23:15:00</td>
+                        <td>Si</td>
+                        <td>Si</td>
+                        <td>Abiero</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td>23:15:00</td>
+                        <td>Si</td>
+                        <td>Si</td>
+                        <td>Abierto</td>
+                        <td>Peligro</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>23:15:00</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>23:15:00</td>
+                        <td>Abierto</td>
+                        <td>Abierto</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr>
+                        <td>23:15:00</td>
+                        <td>No</td>
+                        <td class="table-success">Si</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr>
+                        <td>23:15:00</td>
+                        <td class="table-warning">Si</td>
+                        <td>No</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>23:15:00</td>
+                        <td>Si</td>
+                        <td>Si</td>
+                        <td>Abiero</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td>23:15:00</td>
+                        <td>Si</td>
+                        <td>Si</td>
+                        <td>Abierto</td>
+                        <td>Peligro</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>23:15:00</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>23:15:00</td>
+                        <td>Abierto</td>
+                        <td>Abierto</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr>
+                        <td>23:15:00</td>
+                        <td>No</td>
+                        <td class="table-success">Si</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr>
+                        <td>23:15:00</td>
+                        <td class="table-warning">Si</td>
+                        <td>No</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>23:15:00</td>
+                        <td>Si</td>
+                        <td>Si</td>
+                        <td>Abiero</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td>23:15:00</td>
+                        <td>Si</td>
+                        <td>Si</td>
+                        <td>Abierto</td>
+                        <td>Peligro</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>23:15:00</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>23:15:00</td>
+                        <td>Abierto</td>
+                        <td>Abierto</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr>
+                        <td>23:15:00</td>
+                        <td>No</td>
+                        <td class="table-success">Si</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr>
+                        <td>23:15:00</td>
+                        <td class="table-warning">Si</td>
+                        <td>No</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>23:15:00</td>
+                        <td>Si</td>
+                        <td>Si</td>
+                        <td>Abiero</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-danger">
+                        <td>23:15:00</td>
+                        <td>Si</td>
+                        <td>Si</td>
+                        <td>Abierto</td>
+                        <td>Peligro</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>23:15:00</td>
+                        <td>No</td>
+                        <td>No</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    <tr class="table-info">
+                        <td>23:15:00</td>
+                        <td>Abierto</td>
+                        <td>Abierto</td>
+                        <td>Cerrado</td>
+                        <td>Negativo</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    
+
+
+    <div class="jumbotron">
+    </div>
+
+
+    </div>
+
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+
+    <script src="libs-style/jquery.js"></script>
+    <script src="libs-style/popper.js"></script>
+    <script src="libs-style/bootstrap.js"></script>
+
+
 
 </body>
 
