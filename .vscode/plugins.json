@@ -1,1 +1,1 @@
-{"plugins":["cordova-plugin-whitelist","cordova-plugin-firebase-lib","cordova-plugin-androidx","cordova-plugin-androidx-adapter"]}
+{"plugins":["cordova-plugin-whitelist","cordova-plugin-firebase-lib","cordova-plugin-androidx","cordova-plugin-androidx-adapter","cordova-plugin-splashscreen"]}
