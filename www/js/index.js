@@ -1,8 +1,14 @@
-var app = {
-    initialize: function () {
+var appcordova = {
+    // Application Constructor
+    initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
-    onDeviceReady: function () {
+
+    // deviceready Event Handler
+    //
+    // Bind any cordova events here. Common events are:
+    // 'pause', 'resume', etc.
+    onDeviceReady: function() {
         this.receivedEvent('deviceready');
     },
 
@@ -20,34 +26,10 @@ var app = {
         //     alert("tengo permiso?" + data.isEnabled);
         // });
 
-        // Get Instance ID token. Initially this makes a network call, once retrieved
-        // subsequent calls to getToken will return from cache.
-        window.FirebasePlugin.getToken(function (currentToken) {
-            // alert(currentToken);
-            if (currentToken != null) {
-                alert("aqui pongo el token, luego onNotification()" + currentToken);
-                sendTokenToServer(currentToken);
-                //updateUIForPushEnabled(currentToken);
-            } else {
-                // Show permission request.
-                console.log('No Instance ID token available. Request permission to generate one.');
-                // Show permission UI.
-                updateUIForPushPermissionRequired();
-                setTokenSentToServer(false);
-            }
-        }, function (err) {
-            console.log('An error occurred while retrieving token. ', err);
-            showToken('Error retrieving Instance ID token. ', err);
-            setTokenSentToServer(false);
-        });
+        listeningElement.setAttribute('style', 'display:none;');
+        receivedElement.setAttribute('style', 'display:block;');
 
-        //Accion a realizar cuando recibo una notificacion:
-        window.FirebasePlugin.onNotificationOpen(function (notification) {            
-            alert("entre en onNotificatoinopen" + Object.keys(notification));
-        }, function (error) {
-            console.error(error);
-        });
-
+        console.log('Received Event: ' + id);
     }
 };
 
