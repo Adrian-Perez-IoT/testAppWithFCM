@@ -8,9 +8,8 @@ var app = {
 
     // Update DOM on a Received Event
     receivedEvent: function (id) {
-        
+        alert("entre a la funcion receivedEvent");
         inicializarFirebase();
-        initVue();
 
         // var firebaseThings = window.FirebaseDatabasePlugin.ref('backend-de7e2');
         // console.log("mi base de datos es:", firebaseThings);
@@ -53,19 +52,9 @@ var app = {
 
 app.initialize();
 
-function initVue() {
-    let app = new Vue({
-        el: '#vue-instance',
-        data: {
-            message: 'Hola desde Vue.js'
-        }
-    });
-}
-
-
 function sendTokenToServer(token) {
     //guardo el token en una tabla especial en mi base de datos y luego recupero ese registro desde mi servidor backend
-    // alert("estoy en la funcion sendTokenToServer");
+    alert("estoy en la funcion sendTokenToServer");
     writeUserToken("1", "adrian", "Bandy2@gmail.com", token);
 }
 
@@ -90,5 +79,5 @@ function writeUserToken(userId, name, email, token) {
         email: email,
         token: token
     });
-    alert("Se grabo el token en la RT DB");
+    alert("Ya escribi un nuevo Token");
 }
